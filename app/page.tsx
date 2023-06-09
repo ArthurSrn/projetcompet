@@ -1,43 +1,236 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          En cours de process...&nbsp;
-          {/* <code className="font-mono font-bold">app/page.tsx</code> */}
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/Agora.svg"
-              alt="Vercel Logo"
-              className="relative dark:drop-shadow-[] white:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <header className="flex items-center justify-between bg-regal-green py-[18.5px] px-6">
+        <div className="flex items-center">
+          <Image
+            src="/Logo.svg"
+            alt="Commback Logo"
+            className="w-auto"
+            width="122"
+            height="23"
+          />
         </div>
-      </div>
+        <button className=" bg-dark-green py-2 px-4 rounded"></button>
+      </header>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[] dark:invert"
-          src="/Agora_banniere.svg"
-          alt="Next.js Logo"
-          width={480}
-          height={37}
-          priority
-        />
+      <section className="flex flex-row items-start mx-[16px] mt-[97px] mb-[64px]">
+        <div className="flex flex-col items-start">
+          <h2 className="text-4xl text-white font-bold">
+            <span className="text-[#5D8083] lg:hidden">ComBack</span> La
+            solution Locavore
+          </h2>
+          <p className=" my-5 text-base text-white">
+            Une initiative locavoriste qui facilite la création de commerces
+            locaux pour redynamiser les centres-bourgs.
+          </p>
+          <button className="flex space-x-2 bg-regal-green font-bold p-4 rounded-[20px]">
+            Voir plus
+            <Image
+              src="/FlecheBottom.svg"
+              alt="redirection Voir plus"
+              className="mx-auto"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div className="flex flex-col items-end w-full">
+          <Image
+            src="/Group_940.svg"
+            alt="Fleche bas"
+            className=""
+            width="28"
+            height="296"
+          />
+        </div>
+      </section>
+
+      <section className="mx-8 mb-20">
+        <div className="flex flex-col items-center md:flex-row">
+          <div className="text-center mt-8">
+            <Image
+              src="/30.svg"
+              alt="Vercel Logo"
+              className="mx-auto"
+              width="237"
+              height="90"
+            />
+            <p className=" text-white m-6">
+              des petits commerces alimentaires ont disparu des territoires
+              ruraux
+            </p>
+          </div>
+          <div className="text-center mt-8">
+            <Image
+              src="/63.svg"
+              alt="Vercel Logo"
+              className="mx-auto"
+              width="227"
+              height="90"
+            />
+            <p className=" text-white m-6">
+              des personnes interrogées affirment être prêtes à consommer autant
+              de produits locaux que possible afin de soutenir économie
+            </p>
+          </div>
+          <div className="text-center mt-8">
+            <Image
+              src="/90.svg"
+              alt="Vercel Logo"
+              className="mx-auto"
+              width="235"
+              height="90"
+            />
+            <p className=" text-white m-6">
+              des individus estiment que ces petites surfaces commerciales
+              dynamisent le territoire
+            </p>
+          </div>
+        </div>
+      </section>
+      <div className="bg-white">
+        <section className="">
+          <div className="px-4 py-14">
+            <div className="flex items-center justify-start">
+              <h3 className="text-4xl font-bold">
+                <span className="text-grey-title">Le concept</span> Comment ça
+                fonctionne ?
+              </h3>
+              <Image
+                src="/Ajout_Titre.svg"
+                alt="Vercel Logo"
+                className="max-lg:mr-14 "
+                width="74"
+                height="105"
+              />
+            </div>
+            <div className="mt-8 flex flex-col items-center">
+              <Image
+                src="/Concept.svg"
+                alt="Vercel Logo"
+                className="w-80 md:w-1/3  "
+                width="74"
+                height="105"
+              />
+            </div>
+          </div>
+        </section>
       </div>
+      <section className="lg:px-[80px]">
+        <div className="px-4 pt-14 pb-28">
+          <div className="flex flex-row items-center">
+            <h3 className="text-3xl text-[#5D8083] font-bold">
+              Rejoignez notre communauté{" "}
+              <span className="text-white">de jeunes artisans</span>
+            </h3>
+            <Image
+              src="/Virgule.svg"
+              alt="Image titre"
+              className="w-auto"
+              width="85"
+              height="61"
+            />
+          </div>
+
+          <form className="mt-4 flex flex-col md:flex-row md:flex-wrap">
+            <div className="flex flex-col md:flex-row md:space-x-6 w-full">
+              <input
+                type="text"
+                placeholder="Nom Prénom"
+                className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+              />
+              <input
+                type="text"
+                placeholder="Situation"
+                className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+              />
+            </div>
+            <div className="flex flex-col md:flex-row md:space-x-6 w-full">
+              <input
+                type="tel"
+                placeholder="Numéro de téléphone"
+                className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+              />
+            </div>
+            <button
+              type="submit"
+              className="flex flex-row space-x-2 bg-regal-green font-bold p-4 mt-5 rounded-[20px] w-36"
+            >
+              Envoyer
+              <Image
+                src="/Fleche.svg"
+                alt="Button Logo"
+                className="w-auto"
+                width="24"
+                height="24"
+              />
+            </button>
+          </form>
+
+          <p className="mt-7 text-[#5D8083]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            consequatur
+          </p>
+        </div>
+      </section>
+      <footer className="bg-white py-8 lg:px-20">
+        <div className="max-w-7xl  px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <Image
+              src="/Logo.svg"
+              alt="Comback Logo"
+              className="w-auto mb-2"
+              width="122"
+              height="23"
+            />
+            <p className="text-gray-500 mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
+              justo ut velit tincidunt placerat.
+            </p>
+            <div className="flex flex-row justify-start items-center sm:items-start sm:flex-row gap-4">
+              <div>
+                <Image
+                  src="/facebook.svg"
+                  alt="Vercel Logo"
+                  className="w-auto"
+                  width="24"
+                  height="24"
+                />
+              </div>
+              <div>
+                <Image
+                  src="/linkedin.svg"
+                  alt="Vercel Logo"
+                  className="w-auto"
+                  width="24"
+                  height="23"
+                />
+              </div>
+              <div>
+                <Image
+                  src="/Tiktok.svg"
+                  alt="Vercel Logo"
+                  className="w-auto"
+                  width="24"
+                  height="24"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
-  )
+  );
+  // container : {
+  //   center : true
+  //   padding : 2rem
+  // }
 }

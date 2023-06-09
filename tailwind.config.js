@@ -7,10 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      
+      colors: {
+        'regal-green': '#E3F89D',
+        'dark-green' : '#184A4E',
+        'grey-title' : '#A2B7B2',
+      },
+      fontFamily: {
+        custom: ['var--Hurme'],
       },
     },
   },
