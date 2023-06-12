@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import localFont from "@next/font/local";
+import MatomoScript from "./components/MatomoScript";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>{children}</body>
+      <MatomoScript />
     </html>
   );
 }
