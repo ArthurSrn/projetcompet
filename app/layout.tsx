@@ -1,7 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import localFont from "@next/font/local";
-import MatomoScript from "./components/MatomoScript";
+
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,9 +27,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={font.className}>{children}</body>
-      <MatomoScript />
+
+      <Script id="hotjar-matomo-script" strategy="afterInteractive">
+        {`
+          /* Matomo */
+
+          var _paq = window._paq = window._paq || [];
+          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u="https://comm-back.matomo.cloud/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src='//cdn.matomo.cloud/winkee.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+          })();
+
+          /* Google Optimize */
+         
+        `}
+      </Script>
     </html>
   );
 }
