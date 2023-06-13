@@ -178,13 +178,8 @@ export default function Home() {
                 height="24"
               />
             </button>
-            <div className="min-h-[250px]">
-              <h2 className=" font-ppneuemachina" id="newsletter">
-                ABONNE TOI À LA NEWSLETTER
-              </h2>
-              <NewsletterForm />
-            </div>
           </form>
+          <NewsletterForm />
           <p className="mt-7 text-white">
             En soumettant ce formulaire, j'accepte que les informations saisies
             soient traitéespar CommBack dans le cadre de ma demande de contact
