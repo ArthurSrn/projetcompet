@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BurgerMenu from "./components/Burgermenu";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
             locaux pour redynamiser les centres-bourgs.
           </p>
           <button className="flex space-x-2 bg-regal-green font-bold p-4 rounded-[20px]">
-            Voir plus
+            <Link href={"#section1"}>Voir plus</Link>
             <Image
               src="/FlecheBottom.svg"
               alt="redirection Voir plus"
@@ -92,8 +93,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <div className="bg-white">
-        <section className="">
+        <section id="section1">
           <div className="px-4 py-14">
             <div className="flex items-center justify-start">
               <h3 className="text-4xl font-bold">
