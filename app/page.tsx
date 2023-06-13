@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -197,31 +198,41 @@ export default function Home() {
             </p>
             <div className="flex flex-row justify-start items-center sm:items-start sm:flex-row gap-4">
               <div>
-                <Image
-                  src="/facebook.svg"
-                  alt="Vercel Logo"
-                  className="w-auto"
-                  width="24"
-                  height="24"
-                />
+                <Link href={"https://www.instagram.com/commback_off/"}>
+                  <Image
+                    src="/Instagram.svg"
+                    alt="Instagram Logo"
+                    className="w-auto"
+                    width="24"
+                    height="24"
+                  />
+                </Link>
               </div>
               <div>
-                <Image
-                  src="/linkedin.svg"
-                  alt="Vercel Logo"
-                  className="w-auto"
-                  width="24"
-                  height="23"
-                />
+                <Link href={"https://www.linkedin.com/company/commback/"}>
+                  <Image
+                    src="/linkedin.svg"
+                    alt="Linkedin logo"
+                    className="w-auto"
+                    width="24"
+                    height="23"
+                  />
+                </Link>
               </div>
               <div>
-                <Image
-                  src="/Tiktok.svg"
-                  alt="Vercel Logo"
-                  className="w-auto"
-                  width="24"
-                  height="24"
-                />
+                <Link
+                  href={
+                    "https://www.tiktok.com/@commback_off?is_from_webapp=1&sender_device=pc"
+                  }
+                >
+                  <Image
+                    src="/Tiktok.svg"
+                    alt="Tiktok Logo"
+                    className="w-auto"
+                    width="24"
+                    height="24"
+                  />
+                </Link>
               </div>
             </div>
           </div>

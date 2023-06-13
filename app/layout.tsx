@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "ComBack",
-  description: "Application de location",
+  description: "Application de location pour les metiers de bouch",
 };
 
 const font = localFont({
@@ -46,7 +46,15 @@ export default function RootLayout({
             g.async=true; g.src='//cdn.matomo.cloud/comm-back.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
           })();
 
-          /* Google Optimize */
+          <!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-8F2W7S0C6S"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-8F2W7S0C6S');
+          </script>
          
         `}
       </Script>
