@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import BurgerMenu from "./components/Burgermenu";
-import NewsletterForm from "./components/Newsletter";
 
 export default function Home() {
   return (
@@ -179,7 +178,7 @@ export default function Home() {
               />
             </button>
           </form>
-          <NewsletterForm />
+
           <p className="mt-7 text-white">
             En soumettant ce formulaire, j'accepte que les informations saisies
             soient traitéespar CommBack dans le cadre de ma demande de contact
