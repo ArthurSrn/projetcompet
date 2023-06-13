@@ -57,9 +57,7 @@ export default function RootLayout({
                   r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                   a.appendChild(r);
               })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          
-
-          
+                    
               window.axeptioSettings = {
               clientId:"648830fbc138970094bb1987",
               cookiesVersion: "commback-fr",
@@ -69,8 +67,6 @@ export default function RootLayout({
               e.async = true;e.src = "//static.axept.io/sdk.js";
               t.parentNode.insertBefore(e, t);
               })(document, "script");
-                
-         
         `}
       </Script>
       <GoogleAnalytics />

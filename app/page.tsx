@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BurgerMenu from "./components/Burgermenu";
+import NewsletterForm from "./components/Newsletter";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
             height="23"
           />
         </div>
-        <button className=" bg-dark-green py-2 px-4 rounded"></button>
+
+        <BurgerMenu />
       </header>
 
       <section className="flex flex-row items-start mx-[16px] mt-[97px] mb-[64px]">
@@ -29,7 +31,7 @@ export default function Home() {
             locaux pour redynamiser les centres-bourgs.
           </p>
           <button className="flex space-x-2 bg-regal-green font-bold p-4 rounded-[20px]">
-            <Link href={"#section1"}>Voir plus</Link>
+            <Link href={"#concept"}>Voir plus</Link>
             <Image
               src="/FlecheBottom.svg"
               alt="redirection Voir plus"
@@ -50,7 +52,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-8 mb-20">
+      <section id="presentation" className="mx-8 mb-20">
         <div className="flex flex-col items-center md:flex-row">
           <div className="text-center mt-8">
             <Image
@@ -95,7 +97,7 @@ export default function Home() {
       </section>
 
       <div className="bg-white">
-        <section id="section1">
+        <section id="">
           <div className="px-4 py-14">
             <div className="flex items-center justify-start">
               <h3 className="text-4xl font-bold">
@@ -122,7 +124,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <section className="lg:px-[80px]">
+      <section id="formulaire" className="lg:px-[80px]">
         <div className="px-4 pt-14 pb-28">
           <div className="flex flex-row items-center">
             <h3 className="text-3xl text-[#5D8083] font-bold">
@@ -176,11 +178,18 @@ export default function Home() {
                 height="24"
               />
             </button>
+            <div className="min-h-[250px]">
+              <h2 className=" font-ppneuemachina" id="newsletter">
+                ABONNE TOI À LA NEWSLETTER
+              </h2>
+              <NewsletterForm />
+            </div>
           </form>
-
-          <p className="mt-7 text-[#5D8083]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            consequatur
+          <p className="mt-7 text-white">
+            En soumettant ce formulaire, j'accepte que les informations saisies
+            soient traitéespar CommBack dans le cadre de ma demande de contact
+            et de la relation commerciale qui peut en découler. En savoir plus
+            en consultant notre politique de confidentialité.
           </p>
         </div>
       </section>
