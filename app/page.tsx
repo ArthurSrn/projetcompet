@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BurgerMenu from "./components/Burgermenu";
+import NewsletterForm from "./components/Newsletter";
 
 export default function Home() {
   return (
@@ -138,47 +139,7 @@ export default function Home() {
               height="61"
             />
           </div>
-
-          <form className="mt-4 flex flex-col md:flex-row md:flex-wrap">
-            <div className="flex flex-col md:flex-row md:space-x-6 w-full">
-              <input
-                type="text"
-                placeholder="Nom Prénom"
-                className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
-              />
-              <input
-                type="text"
-                placeholder="Situation"
-                className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
-              />
-            </div>
-            <div className="flex flex-col md:flex-row md:space-x-6 w-full">
-              <input
-                type="tel"
-                placeholder="Numéro de téléphone"
-                className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
-              />
-              <input
-                type="email"
-                placeholder="E-mail"
-                className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
-              />
-            </div>
-            <button
-              type="submit"
-              className="flex flex-row space-x-2 bg-regal-green font-bold p-4 mt-5 rounded-[20px] w-36"
-            >
-              Envoyer
-              <Image
-                src="/Fleche.svg"
-                alt="Button Logo"
-                className="w-auto"
-                width="24"
-                height="24"
-              />
-            </button>
-          </form>
-
+          <NewsletterForm />
           <p className="mt-7 text-white">
             En soumettant ce formulaire, j'accepte que les informations saisies
             soient traitéespar CommBack dans le cadre de ma demande de contact
