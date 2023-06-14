@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import { z } from "zod";
 
 const schema = z.object({
@@ -19,6 +20,7 @@ export default function NewsletterForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm<NewsletterFormInputs>({
     resolver: zodResolver(schema),
   });
@@ -47,6 +49,8 @@ export default function NewsletterForm() {
 
       const responseJson = await res.json();
       console.log("Réponse de l'API :", responseJson);
+
+      reset();
     } catch (error) {
       console.error("Erreur lors de la demande à l'API :", error);
     }
@@ -58,15 +62,15 @@ export default function NewsletterForm() {
         <input
           type="email"
           placeholder="Adresse e-mail"
-          className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+          className=" text-white border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
           {...register("email")}
         />
-        {errors.email && <p>Entrer une adresse e-mail valide</p>}
+        {errors.email && <p className="text-red-500">Entrer une adresse e-mail valide</p>}
       </div>
 
       <div className="flex flex-col md:space-x-6 w-full">
         <input
-          className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+          className=" text-white border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
           type="text"
           placeholder="Nom"
           {...register("firstName")}
@@ -77,7 +81,7 @@ export default function NewsletterForm() {
 
       <div className="flex flex-col  md:space-x-6 w-full">
         <input
-          className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+          className=" text-white border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
           type="text"
           placeholder="Prénom"
           {...register("lastName")}
@@ -87,7 +91,7 @@ export default function NewsletterForm() {
 
       <div className="flex flex-col md:space-x-6 w-full">
         <input
-          className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+          className=" text-white border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
           type="tel"
           placeholder="Téléphone"
           {...register("telephone")}
