@@ -27,34 +27,23 @@ export default function NewsletterForm() {
 
   const onSubmit: SubmitHandler<NewsletterFormInputs> = async (data) => {
     console.log(JSON.stringify(data));
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      console.log(res);
 
-      const result = await res.json();
+    const res = await fetch("/api/newsletter", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-      console.log(result);
+    const result = await res.json();
+    console.log(result);
 
-      if (!res.ok) {
-        throw new Error(
-          "Une erreur s'est produite lors de la demande à l'API."
-        );
-      }
+    const responseJson = await res.json();
+    console.log("Réponse de l'API :", responseJson);
 
-      const responseJson = await res.json();
-      console.log("Réponse de l'API :", responseJson);
-
-      reset();
-    } catch (error) {
-      console.error("Erreur lors de la demande à l'API :", error);
-    }
-  };
+    reset();
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mt-4 flex flex-col md:flex-row md:flex-wrap">
@@ -105,6 +94,7 @@ export default function NewsletterForm() {
       >
         Envoyer
         <Image
+          id="remove"
           src="/Fleche.svg"
           alt="Button Logo"
           className="w-auto"

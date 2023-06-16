@@ -23,6 +23,10 @@ const GoogleAnalytics = () => {
         strategy="afterInteractive"
         id="googleoptimize"
       ></Script>
+
+
+
+
     </>
   );
 };

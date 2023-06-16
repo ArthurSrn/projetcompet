@@ -3,17 +3,18 @@ import Link from "next/link";
 import BurgerMenu from "./components/Burgermenu";
 import NewsletterForm from "./components/Newsletter";
 
+
 export default function Home() {
   return (
     <main>
       <header className="flex items-center justify-between bg-regal-green py-[18.5px] px-6">
         <div className="flex items-center">
           <Image
-            src="/Logo.svg"
+            src="/Logo_Commback.svg"
             alt="Commback Logo"
             className="w-auto"
-            width="122"
-            height="23"
+            width="141"
+            height="25"
           />
         </div>
 
@@ -139,20 +140,28 @@ export default function Home() {
               height="61"
             />
           </div>
+
+
           <NewsletterForm />
-          <p className="mt-7 text-white">
-            En soumettant ce formulaire, j'accepte que les informations saisies
-            soient traitéespar CommBack dans le cadre de ma demande de contact
-            et de la relation commerciale qui peut en découler. En savoir plus
-            en consultant notre politique de confidentialité.
-          </p>
+          <div className="flex items-center space-x-4">
+            <input type="checkbox" className=" form-checkbox text-indigo-600 h-5 w-5" />
+            <p className="mt-7 text-white">
+              En soumettant ce formulaire, j'accepte que les informations saisies
+              soient traitéespar CommBack dans le cadre de ma demande de contact
+              et de la relation commerciale qui peut en découler. En savoir plus
+              en consultant notre politique de confidentialité.
+            </p>
+
+
+          </div>
+
         </div>
       </section>
       <footer className="bg-white py-8 lg:px-20">
         <div className="max-w-7xl  px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Image
-              src="/Logo.svg"
+              src="/Logo_Commback.svg"
               alt="Comback Logo"
               className="w-auto mb-2"
               width="122"
