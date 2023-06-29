@@ -47,17 +47,17 @@ const BurgerMenu = () => {
         <div className=" bg-dark-green flex flex-col items-center justify-center absolute right-0 mx-8 md:w-1/3 rounded-md">
           <Link
             href="#presentation"
-            className="text-white m-6"
+            className="text-white m-6 font-sans"
             onClick={closeMenu}
           >
             PRÉSENTATION
           </Link>
-          <Link href="#concept" className="text-white m-6" onClick={closeMenu}>
+          <Link href="#concept" className="text-white m-6 font-sans" onClick={closeMenu}>
             CONCEPT
           </Link>
           <Link
             href="#formulaire"
-            className="text-white m-6"
+            className="text-white m-6 font-sans"
             onClick={closeMenu}
           >
             FORMULAIRE

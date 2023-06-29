@@ -1,0 +1,31 @@
+[
+    {
+      "ancien": "Boulangerie",
+      "author": "58 999",
+      "title": "Nancay",
+      "content": "80",
+      "imgSrc": "Card1_annonce.svg"
+    },
+    {
+      "ancien": "Epicerie",
+      "author": "86 000",
+      "title": "Le Mesnil-Sevin",
+      "content": "35",
+      "imgSrc": "Card2_annonce.svg"
+    },
+    {
+      "ancien": "Commerce",
+      "author": "35 000",
+      "title": "Salbris",
+      "content": "82",
+      "imgSrc": "Card3_annonce.svg"
+    },
+    {
+      "ancien": "Bijouterie",
+      "author": "49 000",
+      "title": "Yerres",
+      "content": "33",
+      "imgSrc": "Card4_annonce.svg"
+    }
+    
+  ]

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "ComBack",
-  description: "Application de location pour les metiers de bouch",
+  description: "Application de location pour les metiers de bouche",
 };
 
 const font = localFont({
@@ -77,10 +77,7 @@ export default function RootLayout({
               <!-- End Google Tag Manager -->
 
 
-              <!-- Google Tag Manager (noscript) -->
-              src="https://www.googletagmanager.com/ns.html?id=GTM-W7KF5N9"
-              height="0" width="0" style="display:none;visibility:hidden"
-              <!-- End Google Tag Manager (noscript) -->
+           
  
         `}
       </Script>

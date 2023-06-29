@@ -35,7 +35,7 @@ export default function NewsletterForm() {
         "Content-Type": "application/json",
       },
     });
-
+    console.log(res);
     const result = await res.json();
     console.log(result);
 
@@ -47,7 +47,7 @@ export default function NewsletterForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mt-4 flex flex-col md:flex-row md:flex-wrap">
-      <div className="flex flex-col md:space-x-6 w-full">
+      <div className="flex flex-col md:flex-row md:space-x-6 w-full">
         <input
           type="email"
           placeholder="Adresse e-mail"
@@ -55,11 +55,9 @@ export default function NewsletterForm() {
           {...register("email")}
         />
         {errors.email && <p className="text-red-500">Entrer une adresse e-mail valide</p>}
-      </div>
 
-      <div className="flex flex-col md:space-x-6 w-full">
         <input
-          className=" text-white border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
+          className="border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
           type="text"
           placeholder="Nom"
           {...register("firstName")}
@@ -68,7 +66,7 @@ export default function NewsletterForm() {
       </div>
 
 
-      <div className="flex flex-col  md:space-x-6 w-full">
+      <div className="flex flex-col md:flex-row md:space-x-6 w-full">
         <input
           className=" text-white border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
           type="text"
@@ -76,9 +74,7 @@ export default function NewsletterForm() {
           {...register("lastName")}
         />
         {errors.lastName && <p>Entrer un prénom valide</p>}
-      </div>
 
-      <div className="flex flex-col md:space-x-6 w-full">
         <input
           className=" text-white border rounded-xl p-3 mb-2 bg-transparent max-w-[500px]"
           type="tel"

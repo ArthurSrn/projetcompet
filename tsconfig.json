@@ -23,6 +23,10 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Contact.jsx"],
+  "exclude": ["node_modules"],
+
+  "exports": {
+    "./components/navigation/navigation.min.css": "./path/to/navigation.min.css"
+  }
 }

@@ -12,9 +12,11 @@ module.exports = {
         'regal-green': '#E3F89D',
         'dark-green' : '#184A4E',
         'grey-title' : '#A2B7B2',
+        'grey-pale' : '#5D8083',
+        'grey-green' : '#184A4E33'
       },
       fontFamily: {
-        custom: ['var--Hurme'],
+        'Hurme': 'var(--font-Hurme)',
       },
     },
   },
