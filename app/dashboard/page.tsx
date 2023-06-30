@@ -58,18 +58,18 @@ export default function Page() {
                     />
                     <div className="flex space-x-7">
                         <Image
-                            src="/image_annonce.png"
+                            src="/presentation_img.png"
                             alt="image ville"
                             className="hidden lg:block"
-                            width="343"
-                            height="234"
+                            width="241"
+                            height="157"
                         />
                         <Image
                             src="/image_annonce.png"
-                            alt="image ville"
+                            alt="image_four.png"
                             className="hidden lg:block"
-                            width="343"
-                            height="234"
+                            width="241"
+                            height="157"
                         />
                     </div>
                 </div>

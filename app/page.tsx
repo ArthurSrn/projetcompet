@@ -5,9 +5,12 @@ import NewsletterForm from "./components/Newsletter";
 import Concept from "./components/Concept";
 import QuestionComponent from "./components/Question";
 import MyLogement, { Search } from './components/Mylogements';
-import Swipper, { Navigateur, SwipperSearch } from "./components/annonces/Proximite_Cards";
+import Swipper, { Navigateur, SwipperSearch, SwipperSearchAnnonce } from "./components/annonces/Proximite_Cards";
 import SectionWithBackground from "./components/Video";
 import Avis from "./components/Avis";
+import TestimonialCard, { Cards_search } from "./components/TestimonialCard";
+import Slider from "./components/Slider";
+import testimonials from "./data/testimonials.json";
 
 
 
@@ -147,10 +150,21 @@ export default function Home() {
             height="58"
           />
         </div>
-        <div className="">
+        <section className="bg-dark-green ">
+          <div className=" pt-[140px]">
+            <Slider options={{ align: "center" }}>
+              {testimonials.map((testimonial, i) => (
+                // 2. flex-[0_0_50%] set the width of each card to 50% of the viewport
+                // for mobile devices we use 90% width
+                <div key={i} className="flex-[0_0_90%] md:flex-[0_0_50%]">
+                  <Cards_search {...testimonial} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
 
-          <SwipperSearch />
-        </div>
+
 
 
 

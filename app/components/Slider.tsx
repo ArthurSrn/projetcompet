@@ -1,5 +1,7 @@
+"use client"
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import { PropsWithChildren } from "react";
+
 
 //1. define the props
 type Props = { options?: EmblaOptionsType } & PropsWithChildren;
